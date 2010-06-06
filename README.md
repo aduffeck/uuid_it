@@ -1,6 +1,6 @@
 # UuidIt
 
-You need to assign UUIDs to your Model? Simply uuid_it by adding one line of code.
+You need to assign UUIDs to your Model? UuidIt makes it as simple as adding one line of code to the according models.
 
 For actually generating the uuids this plugin uses spectra's ruby-uuid (http://github.com/spectra/ruby-uuid) whih is
 based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
@@ -28,6 +28,9 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
     end
 
     @car.uuid # "9e5edacc-7163-11df-92bb-2d0a2c4dcb1c"
+
+New UUIDs will be assigned when new objects are created. Already existing objects will get a UUID when it is read for the
+first time.
 
 ## Credits
 

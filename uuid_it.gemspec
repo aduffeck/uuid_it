@@ -6,7 +6,7 @@ spec = Gem::Specification.new do |s|
   s.homepage          = "http://aduffeck.github.com/uuid_it"
   s.summary           = "A Rails plugin for easily assigning UUIDs to your models.."
   s.description       = <<-EOM
-    You need to assign UUIDs to your model? UuidIt makes it as simple adding one line of code to the according models. 
+    You need to assign UUIDs to your model? UuidIt makes it as simple as adding one line of code to the according models. 
   EOM
 
   s.has_rdoc         = false
