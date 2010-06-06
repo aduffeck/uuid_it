@@ -7,10 +7,19 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
 
 ## Installation
 
+### As a plugin
+
     script/plugin install git://github.com/aduffeck/uuid_it.git
     script/generate uuid_it
     rake db:migrate
 
+### As a gem
+    Add the following line to your config/environment.rb file:
+
+      config.gem "uuid_it"
+
+    script/generate uuid_it
+    rake db:migrate
 
 ## Usage
 
