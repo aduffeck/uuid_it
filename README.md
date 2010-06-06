@@ -7,8 +7,9 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
 
 ## Installation
 
-    script/plugin install git@github.com:aduffeck/uuid_it.git
+    script/plugin install git://github.com/aduffeck/uuid_it.git
     script/generate uuid_it
+    rake db:migrate
 
 
 ## Usage
