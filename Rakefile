@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require "rake/gempackagetask"
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -21,3 +22,5 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+Rake::GemPackageTask.new(eval(File.read("uuid_it.gemspec"))) { |pkg| }
