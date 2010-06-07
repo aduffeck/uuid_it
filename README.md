@@ -14,6 +14,8 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
     rake db:migrate
 
 ### As a gem
+    gem install uuid_it
+
 Add the following line to your config/environment.rb file:
 
     config.gem "uuid_it"
