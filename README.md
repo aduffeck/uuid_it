@@ -15,14 +15,13 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
 
 ### As a gem
 #### Rails 2.3.x
-    gem install uuid_it
-
 Add the following line to your config/environment.rb file:
 
     config.gem "uuid_it"
 
 Then
 
+    gem install uuid_it
     script/generate uuid_it
     rake db:migrate
 
