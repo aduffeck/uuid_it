@@ -5,7 +5,7 @@ class CreateUuids < ActiveRecord::Migration
       t.integer :uuidable_id
       t.string :uuidable_type, :limit => 40
     end
-    add_index :uuids, :uuidable_id
+    add_index :uuids, [:uuidable_id, :uuidable_type]
   end
 
   def self.down
