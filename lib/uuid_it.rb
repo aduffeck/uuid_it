@@ -24,6 +24,7 @@ module ActiveRecord
           uuid = Uuid.new(:uuidable_id => self.id, :uuidable_type => self.class.name)
           uuid.uuid = UUID.create.to_s
           uuid.save
+          self.reload
         end
       end
     end
