@@ -1,9 +1,9 @@
 spec = Gem::Specification.new do |s|
   s.name              = "uuid_it"
-  s.version           = "0.0.1"
+  s.version           = "0.0.2"
   s.authors           = ["André Duffeck"]
   s.email             = ["aduffeck@suse.de"]
-  s.homepage          = "http://aduffeck.github.com/uuid_it"
+  s.homepage          = "http://github.com/aduffeck/uuid_it"
   s.summary           = "A Rails plugin for easily assigning UUIDs to your models.."
   s.description       = <<-EOM
     You need to assign UUIDs to your model? UuidIt makes it as simple as adding one line of code to the according models. 
