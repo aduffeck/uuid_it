@@ -7,14 +7,15 @@ based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
 
 ## Installation
 
-### As a plugin
+### Rails 2.3.x
+
+#### As a plugin
 
     script/plugin install git://github.com/aduffeck/uuid_it.git
     script/generate uuid_it
     rake db:migrate
 
-### As a gem
-#### Rails 2.3.x
+#### As a gem
 Add the following line to your config/environment.rb file:
 
     config.gem "uuid_it"
@@ -25,7 +26,14 @@ Then
     script/generate uuid_it
     rake db:migrate
 
-#### Rails 3
+### Rails 3
+#### As a plugin
+
+    rails plugin install git://github.com/aduffeck/uuid_it.git
+    rails generate uuid_it
+    rake db:migrate
+
+#### As a gem
 Add the following line to your Gemfile:
 
     gem "uuid_it"
