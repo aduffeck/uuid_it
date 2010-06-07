@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = "uuid_it"
-  s.version           = "0.0.2"
+  s.version           = "0.0.3"
   s.authors           = ["André Duffeck"]
   s.email             = ["aduffeck@suse.de"]
   s.homepage          = "http://github.com/aduffeck/uuid_it"
