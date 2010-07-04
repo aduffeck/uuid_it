@@ -2,7 +2,7 @@
 
 You need to assign UUIDs to your Model? UuidIt makes it as simple as adding one line of code to the according models.
 
-For actually generating the uuids this plugin uses spectra's ruby-uuid (http://github.com/spectra/ruby-uuid) whih is
+For actually generating the uuids this plugin uses spectra's ruby-uuid (http://github.com/spectra/ruby-uuid) which is
 based on ruby-uuid (http://raa.ruby-lang.org/project/ruby-uuid/).
 
 ## Installation
