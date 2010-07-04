@@ -53,6 +53,8 @@ Then
 
     @car.uuid # "9e5edacc-7163-11df-92bb-2d0a2c4dcb1c"
 
+    Car.find_by_uuid("9e5edacc-7163-11df-92bb-2d0a2c4dcb1c") # => @car
+
 UUIDs will be assigned to new objects when they are created. Already existing objects will get a UUID when it is accessed
 for the first time.
 
