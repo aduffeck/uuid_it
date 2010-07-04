@@ -7,6 +7,10 @@ end
 class Bike < ActiveRecord::Base
 end
 
+class Scooter < ActiveRecord::Base
+  uuid_it
+end
+
 class UuidItTest < ActiveSupport::TestCase
   test "should assing Uuids to new objects" do
     c = Car.create
@@ -33,5 +37,14 @@ class UuidItTest < ActiveSupport::TestCase
     b2 = Bike.create
     assert b2.uuid_object
     assert b2.uuid.present?
+  end
+
+  test "find_by_uuid" do
+    car = Car.create
+    scooter = Scooter.create
+
+    assert_nil Car.find_by_uuid("bla")
+    assert_equal car, Car.find_by_uuid(car.uuid)
+    assert_nil Car.find_by_uuid(scooter.uuid)
   end
 end
