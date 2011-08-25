@@ -24,11 +24,10 @@ module ActiveRecord
         end
 
         def assign_uuid
-          return if Uuid.find_by_uuidable_type_and_uuidable_id(self.class.name, self.id)
-          uuid = Uuid.new(:uuidable => self)
-          uuid.uuid = UUID.create.to_s
-          uuid.save
-          self.reload
+          return if self.uuid_object.present?
+
+          self.build_uuid_object(:uuid => UUID.create.to_s)
+          self.save unless self.new_record?
         end
       end
     end

@@ -47,4 +47,20 @@ class UuidItTest < ActiveSupport::TestCase
     assert_equal car, Car.find_by_uuid(car.uuid)
     assert_nil Car.find_by_uuid(scooter.uuid)
   end
+
+  test "should only create one uuid object when a new object with a uuid is saved" do
+    assert_difference "Uuid.count", 1 do
+      c = Car.new
+      assert c.uuid
+      c.save!
+    end
+  end
+
+  test "should not leak Uuid objects on unsaved uuidables" do
+    assert_difference "Uuid.count", 0 do
+      1..3.times do
+        Car.new.uuid
+      end
+    end
+  end
 end
