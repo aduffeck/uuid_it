@@ -4,9 +4,10 @@ require 'rails/generators/migration'
 class UuidItGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
+  source_root File.expand_path('../../../generators/uuid_it/templates', __FILE__)
+
   def copy_files(*args)
-    migration_template File.join(File.dirname(__FILE__), "..", "..", "generators", "uuid_it", "templates", "create_uuids.rb"),
-                                 "db/migrate/create_uuids.rb"
+    migration_template "create_uuids.rb", "db/migrate/create_uuids.rb"
   end
 
   def self.next_migration_number dirname
