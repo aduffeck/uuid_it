@@ -63,4 +63,9 @@ class UuidItTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test "find_by_uuid must not available on classes without uuid_it" do
+    assert_nil Car.find_by_uuid("bla")
+    assert_raise(NoMethodError) { Bike.find_by_uuid("bla") }
+  end
 end
